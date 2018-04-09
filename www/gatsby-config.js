@@ -13,7 +13,6 @@ module.exports = {
         name: 'pages',
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -28,7 +27,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 1200,
+              maxWidth: 1600,
               // Remove the default behavior of adding a link to each
               // image.
               linkImagesToOriginal: false,
@@ -50,6 +49,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',

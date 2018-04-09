@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina|Roboto:300,400');
+
+body {
+  background-color: #27215e;
+  color: #eee;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Baloo Bhaina', sans-serif;
+}

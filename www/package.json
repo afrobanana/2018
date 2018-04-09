@@ -1,10 +1,11 @@
 {
   "name": "abr-website-2018",
   "description": "Afrobanana Republic Festival 2018",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "rudasn@gmail.com",
   "dependencies": {
     "gatsby": "^1.9.241",
+    "gatsby-image": "^1.0.43",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-google-analytics": "^1.0.28",
     "gatsby-plugin-react-helmet": "^2.0.8",
@@ -27,6 +28,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "npm run build && node ./scripts/deploy",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"

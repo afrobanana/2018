@@ -1,7 +1,7 @@
 var ghpages = require('gh-pages')
 var pgk = require('../package.json')
 
-console.log(`Deploying ${ pgk.name }, release ${ pgk.version } to Github...`)
+console.log(`\n\nDeploying ${ pgk.name }, release ${ pgk.version } to Github...`)
 
 ghpages.publish('public', {
     src: '**/*',
@@ -16,6 +16,6 @@ ghpages.publish('public', {
         console.log('---')
     }
     else {
-        console.log(`Release ${ pgk.version } deployed to Github!`)
+        console.log(`\n\nRelease ${ pgk.version } deployed to Github!`)
     }
 })

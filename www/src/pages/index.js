@@ -1,19 +1,16 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 import Page from '../containers/page'
 
 import { nodeToInstance } from '../utils/edges'
 
-const Banner = styled.div`
-  .gatsby-resp-image-wrapper {
-    max-width: 100% !important;
-  }
-`
-
 const HomePage = ({ data = {}, pathContext, location }) => {
   const { title, description, html } = nodeToInstance(data.page || {})
+  const { landingImage } = data
+
   return (
     <Page
       title={title}
@@ -21,7 +18,7 @@ const HomePage = ({ data = {}, pathContext, location }) => {
       pathContext={pathContext}
       location={location}
     >
-      <Banner dangerouslySetInnerHTML={{ __html: html }} />
+      <Img {...landingImage.childImageSharp} />
     </Page>
   )
 }
@@ -37,6 +34,13 @@ export const HomeQuery = graphql`
       frontmatter {
         title
         description
+      }
+    }
+    landingImage: file(relativePath: { eq: "images/landing2.jpg" }) {
+      childImageSharp {
+        sizes(quality: 100, maxWidth: 1500) {
+          ...GatsbyImageSharpSizes
+        }
       }
     }
   }

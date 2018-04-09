@@ -26,7 +26,7 @@ export default ({ action }) => (
       />
     </p>
     <p>
-      <Button type="submit" name="subscribe" bsStyle="primary">
+      <Button type="submit" name="subscribe">
         Subscribe!
       </Button>
     </p>
